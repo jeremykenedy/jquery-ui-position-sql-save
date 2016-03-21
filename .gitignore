@@ -32,11 +32,10 @@ Thumbs.db
 composer.lock
 
 ### ASSET EXCLUSIONS ###
-/ref
-build
-/build/*
-uploads
-#images/
+build/
+uploads/
+images/
+css/
 vendor
 vendor/*
 node_modules
