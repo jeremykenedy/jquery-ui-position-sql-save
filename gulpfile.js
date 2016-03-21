@@ -170,15 +170,20 @@ elixir(function(mix) {
 	// PROCESS APP ASSETS
 	if (enable_compile_app) {
 
+		// COMPILE BOOTSTRAP LESS
+		mix.less('vender/bower_dl/bootstrap/less/bootstrap.less', '/css/vendor/bootstrap.css');
+
 		// COMIPILE APP SASS/SCSS - APP CSS
 		if (enable_compile_app_css) {
-			mix.sass('app.scss', 'public/assets/css/app.css');
+			mix.sass('sass/app.scss', 'public/assets/css/app.css');
 		}
 
 		// COMBINE CSS INTO SINGLE FILE
 	    mix.styles([
-			'public/assets/css/vendor/bootstrap.css',												// BOOTSTRAP CORE INPUT
-			'public/assets/css/app.css',
+
+			'/css/vendor/bootstrap.css',					// COMPILED BOOTSTRAP FILE
+			'/css/app.css',
+
 	    ],
 	    'public/assets/css/admin/style.css', './');													// SINGLE FILE OUTPUT
 
