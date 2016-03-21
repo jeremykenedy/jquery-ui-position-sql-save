@@ -1,0 +1,17 @@
+{
+  "name": "jquery-ui-position-sql-save",
+  "description": "Save position and resize properties of jQuery UI to a SQL table",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "vendor/bower_dl",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "fontawesome": "~4.4.0",
+    "jquery-ui": "jqueryui#~1.11.4",
+  }
+}
