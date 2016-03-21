@@ -49,6 +49,7 @@
  */
 	var gulp = require('gulp'),
 	    del = require('del'),
+		sass = require('gulp-sass'),
 	    less = require('gulp-less'),
 	    cache = require('gulp-cache'),
 	    nano = require('gulp-cssnano'),
@@ -57,8 +58,9 @@
 	    rename = require('gulp-rename'),
 	    concat = require('gulp-concat'),
 	    notify = require('gulp-notify'),
-	    sass = require('gulp-ruby-sass'),
 	    imagemin = require('gulp-imagemin'),
+		minifyCSS = require('gulp-clean-css'),
+	    concatCss = require('gulp-concat-css'),
 	    livereload = require('gulp-livereload'),
 		minifyHTML = require('gulp-minify-html'),
 	    lessToScss = require('gulp-less-to-scss'),
@@ -127,40 +129,29 @@ gulp.task("copyfiles", function() {
  |--------------------------------------------------------------------------
  */
 
-// elixir(function(mix) {
+gulp.task('default', function() {
 
-// 	// PROCESS APP ASSETS
-// 	if (enable_compile_app) {
+	// PROCESS APP ASSETS
+	if (enable_compile_app) {
 
-// 		// COMPILE BOOTSTRAP LESS
-// 		mix.less('vender/bower_dl/bootstrap/less/bootstrap.less', '/css/vendor/bootstrap.css');
+		// COMPILE SASS/SCSS - APP CSS
+	    gulp.src('sass/**/*.scss')
+	        .pipe(sass().on('error', sass.logError))
+	        .pipe(gulp.dest('build/css/'));
 
-// 		// COMIPILE APP SASS/SCSS - APP CSS
-// 		if (enable_compile_app_css) {
-// 			mix.sass('sass/app.scss', 'public/assets/css/app.css');
-// 		}
+	    // COMBINE CSS
+		var cssSources = [
+			'build/css/**/*.css'
+		];
 
-// 		// COMBINE CSS INTO SINGLE FILE
-// 	    mix.styles([
+		return gulp.src(cssSources)
+		    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+		    .pipe(concat('style.css'))
+		    .pipe(gulp.dest('css'))
+		    .pipe(minifyCSS())
+		    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
+		    .pipe(concat('style.min.css'))
+		    .pipe(gulp.dest('css'))
 
-// 			'/css/vendor/bootstrap.css',					// COMPILED BOOTSTRAP FILE
-// 			'/css/app.css',
-
-// 	    ],
-// 	    'public/assets/css/admin/style.css', './');													// SINGLE FILE OUTPUT
-
-// 		//COMBINE APP SCRIPTS - APP JS
-// 		if (enable_compile_app_js) {
-// 		    mix.scripts([
-// 					'js/jquery.js',
-// 					'js/bootstrap.js',
-// 					'js/app.js',
-// 			    ],
-// 			    'public/assets/js/app.js',
-// 			    'resources/assets'
-// 		   	);
-// 		}
-// 	}
-
-// });
-
+	}
+});

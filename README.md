@@ -16,9 +16,11 @@ Save position and resize properties of jQuery UI to a SQL table.
 1. Run `git clone https://github.com/jeremykenedy/jquery-ui-position-sql-save.git jquery-ui-position-sql-save.git`
 2. From the projects root run `bower update`
 3. From the projects root run `npm install`
+4. From the projects root run `gulp copyfiles`
+5. From the projects root run `gulp`
 
 
-2. Create a MySQL database for the project
+X. Create a MySQL database for the project
     * ```mysql -u {SQL_USERNAME} -p```
     * ```create database jQueryUISave;```
     * ```\q```
