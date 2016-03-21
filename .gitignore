@@ -35,6 +35,7 @@ composer.lock
 /ref
 uploads
 vendor
+vendor/*
 node_modules
 Homestead.yaml
 Homestead.json

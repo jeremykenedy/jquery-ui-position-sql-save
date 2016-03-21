@@ -10,7 +10,7 @@
   ],
   "dependencies": {
     "jquery": "~2.1.4",
-    "bootstrap": "~3.3.5",
+    "bootstrap": "~4.0.*",
     "fontawesome": "~4.4.0",
     "jquery-ui": "jqueryui#~1.11.4"
   }
