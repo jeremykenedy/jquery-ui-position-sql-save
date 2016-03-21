@@ -32,17 +32,20 @@ X. Create a MySQL database for the project
 ### File Structure
 ```
 jquery-ui-position-sql-save/
-    ├── index.php
+    ├── .bowerrc
+    ├── .gitignore
+    ├── LICENSE
+    ├── README.md
+    ├── bower.json
+    ├── gulpfile.js
+    ├── package.json
     ├── css/
-    │    ├──
-    │    └──
-    ├── js/
-    │    ├──
-    │    └──
-    ├── sql/
-    │    ├──
-    │    └──
-    └──
+    │    ├── style.css
+    │    └── style.min.css
+    └── sass/
+         └── app.scss
+
+
 ```
 ---
 
