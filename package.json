@@ -18,6 +18,6 @@
   },
   "dependencies": {
     "bootstrap-sass": "^3.*",
-    "gulp-rename": "^1.2.2",
+    "gulp-rename": "^1.2.2"
   }
 }
