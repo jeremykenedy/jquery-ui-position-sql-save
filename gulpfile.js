@@ -113,7 +113,16 @@ gulp.task("copyfiles", function() {
 	 */
 
 	gulp.src("vendor/bower_dl/fontawesome/fonts/**")
-		.pipe(gulp.dest("build/fonts/"));
+		.pipe(gulp.dest("fonts/"));
+
+	/*
+	 |--------------------------------------------------------------------------
+	 | Copy jQuery UI Image Assets
+	 |--------------------------------------------------------------------------
+	 */
+
+	gulp.src("vendor/bower_dl/jquery-ui/themes/base/images/**")
+		.pipe(gulp.dest("images/"));
 
 });
 
@@ -141,7 +150,27 @@ gulp.task('default', function() {
 
 	    // COMBINE CSS
 		var cssSources = [
-			'build/css/**/*.css'
+			'build/css/**/*.css',
+			'vendor/bower_dl/bootstrap/dist/css/bootstrap.css',
+			'vendor/bower_dl/fontawesome/css/font-awesome.css',
+			'vendor/bower_dl/jquery-ui/themes/base/core.css',
+			'vendor/bower_dl/jquery-ui/themes/base/accordion.css',
+			'vendor/bower_dl/jquery-ui/themes/base/autocomplete.css',
+			'vendor/bower_dl/jquery-ui/themes/base/button.css',
+			'vendor/bower_dl/jquery-ui/themes/base/datepicker.css',
+			'vendor/bower_dl/jquery-ui/themes/base/dialog.css',
+			'vendor/bower_dl/jquery-ui/themes/base/draggable.css',
+			'vendor/bower_dl/jquery-ui/themes/base/menu.css',
+			'vendor/bower_dl/jquery-ui/themes/base/progressbar.css',
+			'vendor/bower_dl/jquery-ui/themes/base/resizable.css',
+			'vendor/bower_dl/jquery-ui/themes/base/selectable.css',
+			'vendor/bower_dl/jquery-ui/themes/base/selectmenu.css',
+			'vendor/bower_dl/jquery-ui/themes/base/sortable.css',
+			'vendor/bower_dl/jquery-ui/themes/base/slider.css',
+			'vendor/bower_dl/jquery-ui/themes/base/spinner.css',
+			'vendor/bower_dl/jquery-ui/themes/base/tabs.css',
+			'vendor/bower_dl/jquery-ui/themes/base/tooltip.css',
+			'vendor/bower_dl/jquery-ui/themes/base/theme.css'
 		];
 
 		return gulp.src(cssSources)

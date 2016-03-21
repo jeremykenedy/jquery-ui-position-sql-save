@@ -9,7 +9,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
+    "jquery": "~2.2.2",
     "bootstrap": "~4.0.*",
     "fontawesome": "~4.4.0",
     "jquery-ui": "jqueryui#~1.11.4"

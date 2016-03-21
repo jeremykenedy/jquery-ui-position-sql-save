@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+	    <meta charset="utf-8">
+	    <title>jQuery UI Demo</title>
+
+	    <link rel="stylesheet" href="css/style.css">
+	    <style type="text/css">
+
+			html, body {
+			    background: #151515;
+			}
+			#master_container {
+			    background:#333;
+			    height: 400px;
+			    margin: 1em auto;
+			    position: relative;
+			    width: 960px;
+			    border: 0;
+			    overflow: hidden;
+			}
+			#draggable_box {
+			    background: #FFFFFF;
+				width: 150px;
+				height: 150px;
+				padding: 1em;
+				cursor: move;
+				border: 0;
+			}
+			#respond{
+			    color: #fff;
+			    margin: 0 auto;
+			    width: 960px;
+			}
+
+	    </style>
+	</head>
+	<body>
+
+	    <div id="master_container" class="ui-widget-content">
+	        <div id="draggable_box">
+		        <p>
+		        	Drag me around
+		        </p>
+	        </div>
+	    </div>
+
+	    <div id="respond"></div>
+
+	    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+
+	    <script type="text/javascript">
+
+		    $(document).ready(function() {
+		        $("#draggable_box").draggable({
+		                containment: '#master_container',
+		                scroll: false
+		         }).mousemove(function(){
+		                var coord = $(this).position();
+		                $("p:last").text( "left: " + coord.left + ", top: " + coord.top );
+		         }).mouseup(function(){
+		                var coords=[];
+		                var coord = $(this).position();
+		                var item={ coordTop:  coord.left, coordLeft: coord.top  };
+		                coords.push(item);
+		                var order = { coords: coords };
+		                $.post('updatecoords.php', 'data='+$.toJSON(order), function(response){
+		                        if(response=="success")
+		                            $("#respond").html('<div class="success">X and Y Coordinates Saved!</div>').hide().fadeIn(1000);
+		                            setTimeout(function(){ $('#respond').fadeOut(1000); }, 2000);
+		                        });
+		                });
+
+		        });
+
+	    </script>
+
+	</body>
+</html
