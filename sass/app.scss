@@ -1,0 +1,24 @@
+$color1:			#151515;
+$color2:			#FFFFFF;
+
+html, body {
+    background: $color1;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#draggable_box {
+    background: $color2;
+	width: 125px;
+	height: 125px;
+	padding: 1em;
+	cursor: move;
+	border: 0;
+}
+#response{
+    background: $color1;
+    color: $color2;
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    padding: 1em;
+}

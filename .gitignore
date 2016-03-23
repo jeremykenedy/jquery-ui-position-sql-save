@@ -33,6 +33,7 @@ composer.lock
 
 ### ASSET EXCLUSIONS ###
 build/
+sass/build/
 uploads/
 images/
 css/

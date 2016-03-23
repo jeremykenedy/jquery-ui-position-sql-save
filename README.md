@@ -25,6 +25,14 @@ X. Create a MySQL database for the project
     * ```create database jQueryUISave;```
     * ```\q```
 
+```
+CREATE TABLE IF NOT EXISTS `coords` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `x_pos` int(4) NOT NULL,
+  `y_pos` int(4) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
+```
 
 ### jquery-ui-position-sql-save URL's (routes)
 * ```/```
@@ -39,12 +47,13 @@ jquery-ui-position-sql-save/
     ├── bower.json
     ├── gulpfile.js
     ├── package.json
-    ├── css/
-    │    ├── style.css
-    │    └── style.min.css
+    ├── js/
+    │    └── app.js
+    ├── php/
+    │    ├── config.php
+    │    └── updatecoords.scss
     └── sass/
          └── app.scss
-
 
 ```
 ---
