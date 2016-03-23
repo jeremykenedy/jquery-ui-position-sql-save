@@ -54,8 +54,3 @@ jquery-ui-position-sql-save/
          └── app.scss
 
 ```
----
-
-## Enjoy
-
-###### ~ **Jeremy**
