@@ -194,7 +194,7 @@ gulp.task('default', function() {
 				'sass/build/css/app.css'
 			];
 
-			return gulp.src(cssSources)
+			gulp.src(cssSources)
 			    .pipe(autoprefixer('last 2 version', 'safari 5', 'ie 8', 'ie 9'))
 			    .pipe(concat('style.css'))
 			    .pipe(gulp.dest('css'))
@@ -215,7 +215,7 @@ gulp.task('default', function() {
 				'js/app.js'
 			];
 
-			return gulp.src(jsSources)
+			gulp.src(jsSources)
 			    .pipe(concat('js-combined.min.js'))
 			    .pipe(uglify())
 			    .pipe(gulp.dest('js'));
