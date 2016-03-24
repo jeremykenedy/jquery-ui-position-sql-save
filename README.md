@@ -8,7 +8,7 @@ Save position ~~and resize~~ properties of jQuery UI to a SQL table.
 | Uses MySQL database to save jQuery UI position |
 | Uses BOWER to manage and download dependencies directly |
 | Uses Node Package Manager (NPM) to pull GULP dependencies |
-| Uses GULP to setup setup assets file structure and compile SCSS, and JS |
+| Uses GULP to setup assets file structure and compile SCSS, and JS |
 
 ### Quick Project Setup
 ###### (Not including your dev environment)
