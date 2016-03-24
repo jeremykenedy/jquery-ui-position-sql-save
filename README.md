@@ -1,6 +1,6 @@
 # jquery-ui-position-sql-save [![License](https://poser.pugx.org/laravel/framework/license.svg)]()
 
-Save position and resize properties of jQuery UI to a SQL table.
+Save position ~~and resize~~ properties of jQuery UI to a SQL table.
 
 | jquery-ui-position-sql-save Features |
 | :------------ |
