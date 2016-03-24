@@ -2,14 +2,13 @@
 
 Save position and resize properties of jQuery UI to a SQL table.
 
-| jquery-ui-position-sql-save Features  |
+| jquery-ui-position-sql-save Features |
 | :------------ |
-| Uses jQuery and jQuery UI |
-| Uses MySQL database to save jQuery UI settings |
-| Uses BOWER to manage dependencies |
-| Uses Node Package Manager (NPM) to pull dev dependencies|
+| Uses jQuery, jQuery UI, and jQuery JSON |
+| Uses MySQL database to save jQuery UI position |
+| Uses BOWER to manage and download dependencies directly |
+| Uses Node Package Manager (NPM) to pull GULP dependencies |
 | Uses GULP to setup setup assets file structure and compile SCSS, and JS |
-|Ready to Play|
 
 ### Quick Project Setup
 ###### (Not including your dev environment)
@@ -40,6 +39,8 @@ Save position and resize properties of jQuery UI to a SQL table.
     PRIMARY KEY (`id`)
   ) ENGINE=MyISAM  DEFAULT CHARSET=latin1;
   ```
+
+Done
 
 ### File Structure
 ```
