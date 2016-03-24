@@ -19,9 +19,15 @@ Save position and resize properties of jQuery UI to a SQL table.
 4. From the projects root run `gulp copyfiles`
 5. From the projects root run `gulp`
 6. Create a MySQL database for the project
-    * ```mysql -u {SQL_USERNAME} -p```
-    * ```create database ui;```
-
+   
+   ```
+   mysql -u {SQL_USERNAME} -p
+   ```
+   
+   ```
+   create database ui;
+   ```
+   
 7. Create table and columns in MySQL
   ```
   use database ui;
