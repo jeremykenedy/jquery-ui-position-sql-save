@@ -38,19 +38,24 @@ Save position and resize properties of jQuery UI to a SQL table.
 ### File Structure
 ```
 jquery-ui-position-sql-save/
+    ├── js/
+    │    ├── app.js
+    │    ├── jquery-ui.min.js
+    │    ├── jquery.json.min.js
+    │    ├── jquery.min.js 
+    │    └── js-combined.min.js
+    ├── php/
+    │    ├── config.php
+    │    └── updatecoords.php
+    ├── sass/
+    │    └── app.scss
     ├── .bowerrc
     ├── .gitignore
     ├── LICENSE
     ├── README.md
     ├── bower.json
     ├── gulpfile.js
-    ├── package.json
-    ├── js/
-    │    └── app.js
-    ├── php/
-    │    ├── config.php
-    │    └── updatecoords.scss
-    └── sass/
-         └── app.scss
-
+    ├── index.php
+    └── package.json
+    
 ```
